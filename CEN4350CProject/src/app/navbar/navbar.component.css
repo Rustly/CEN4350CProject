@@ -1,0 +1,13 @@
+.fancy-button {
+  padding: 10px;
+  margin: 32px;
+  font-size: 32px;
+  font-weight: 500;
+  color: white;
+}
+
+  .fancy-button:hover {
+    background-color: white;
+    color: black;
+  }
+  
