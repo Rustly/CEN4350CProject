@@ -6,8 +6,12 @@
   color: white;
 }
 
-  .fancy-button:hover {
-    background-color: white;
-    color: black;
-  }
+a {
+    text-decoration: none;
+}
+
+.fancy-button:hover {
+  background-color: white;
+  color: black;
+}
   

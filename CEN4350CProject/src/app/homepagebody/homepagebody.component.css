@@ -16,3 +16,7 @@ img {
 .fancy-button:hover {
     opacity: .6;
 }
+
+a {
+    text-decoration: none;
+}
