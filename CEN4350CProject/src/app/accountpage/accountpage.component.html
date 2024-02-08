@@ -1,8 +1,20 @@
 <div class='accountpage'>
   <h1>Pending Sitting Requests</h1>
-  <br><br>No pending requests.<br><br><br>
+  <ul class='pendinglist'>
+    <li *ngFor='let request of requests_pending'>
+      {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
+    </li>
+  </ul>
   <h1>Confirmed Sitting Requests</h1>
-  <br><br>No confirmed requests.<br><br><br>
+  <ul class='confirmedlist'>
+    <li *ngFor='let request of requests_confirmed'>
+      {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
+    </li>
+  </ul>
   <h1>Denied Sitting Requests</h1>
-  <br><br>No denied requests.
+  <ul class='deniedlist'>
+    <li *ngFor='let request of requests_denied'>
+      {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
+    </li>
+  </ul>
 </div>

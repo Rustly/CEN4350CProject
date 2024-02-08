@@ -1,0 +1,13 @@
+<h3>Reviews</h3>
+<ul class='reviewlist'>
+  <li *ngFor='let review of reviews'>
+    <span class='reviewbody'>{{review.comment}}</span><br>
+    <span class='author'>{{review.author}}</span><span class='date'>{{review.date}}</span><br><br>
+  </li>
+</ul>
+<br><br>
+<h3>Write a review</h3>
+<textarea id='newcomment' class='newcomment' rows=5 cols=60 placeholder='Comment'></textarea><br>
+<label>Display Name </label><input id='newname' placeholder='Your Name'><br>
+<label>Email </label><input id='newemail' placeholder='Your Email'><br>
+<button>Submit</button>

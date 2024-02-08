@@ -10,7 +10,6 @@ img {
   font-size: 32px;
   color: white;
   background-color: gray;
-  font-family:'Comic Sans MS';
 }
 
 .fancy-button:hover {
@@ -19,4 +18,8 @@ img {
 
 a {
     text-decoration: none;
+}
+
+.features {
+    list-style-position: inside;
 }
