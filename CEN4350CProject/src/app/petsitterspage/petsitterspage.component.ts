@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Petsitter } from '../petsitter';
+import { MOCK_SITTERS } from './mock-petsitters';
 
 @Component({
   selector: 'app-petsitterspage',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './petsitterspage.component.css'
 })
 export class PetsitterspageComponent {
-
+  petsitters = MOCK_SITTERS;
 }

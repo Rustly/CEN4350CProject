@@ -1,1 +1,7 @@
-<p>petsitterspage works!</p>
+<div *ngFor = 'let petsitter of petsitters'>
+  <h2>
+    <a title='petsitter.name' routerLink="['/petsitters', petsitter.id]">
+      {{petsitter.name}}
+    </a>
+  </h2>
+</div>

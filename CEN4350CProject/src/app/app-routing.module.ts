@@ -31,6 +31,10 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountpageComponent
+  },
+  {
+    path: 'petsitters/:Id',
+    component: PetsitterspageComponent
   }
 ];
 
