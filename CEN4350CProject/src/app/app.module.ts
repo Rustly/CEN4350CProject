@@ -10,6 +10,7 @@ import { RequestpageComponent } from './requestpage/requestpage.component';
 import { ReviewpageComponent } from './reviewpage/reviewpage.component';
 import { PetsitterspageComponent } from './petsitterspage/petsitterspage.component';
 import { AccountpageComponent } from './accountpage/accountpage.component';
+import { PetsitterdetailsComponent } from './petsitterdetails/petsitterdetails.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +22,13 @@ import { AccountpageComponent } from './accountpage/accountpage.component';
     ReviewpageComponent,
     PetsitterspageComponent,
     AccountpageComponent,
+    PetsitterdetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

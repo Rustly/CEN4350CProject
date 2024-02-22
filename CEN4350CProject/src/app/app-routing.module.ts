@@ -6,6 +6,7 @@ import { RequestpageComponent } from './requestpage/requestpage.component'
 import { PetsitterspageComponent } from './petsitterspage/petsitterspage.component'
 import { ReviewpageComponent } from './reviewpage/reviewpage.component'
 import { AccountpageComponent } from './accountpage/accountpage.component'
+import { PetsitterdetailsComponent } from './petsitterdetails/petsitterdetails.component'
 
 const routes: Routes = [
   {
@@ -25,17 +26,17 @@ const routes: Routes = [
     component: ReviewpageComponent
   },
   {
-    path: 'petsitters',
-    component: PetsitterspageComponent
-  },
-  {
     path: 'account',
     component: AccountpageComponent
   },
   {
-    path: 'petsitters/:Id',
+    path: 'petsitters',
     component: PetsitterspageComponent
-  }
+  },
+  {
+    path: 'petsitters/:id',
+    component: PetsitterdetailsComponent
+  },
 ];
 
 @NgModule({

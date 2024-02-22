@@ -1,6 +1,3 @@
-img {
-    margin: 80px;
-}
 
 .fancy-button {
   margin: 100px;
@@ -23,3 +20,14 @@ a {
 .features {
     list-style-position: inside;
 }
+
+.imagerows {
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+  img {
+    margin: 80px;
+    margin-bottom: 0px;
+  }

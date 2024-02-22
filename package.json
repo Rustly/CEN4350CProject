@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ngx-carousel-ease": "^0.1.1",
+    "tslib": "^2.6.2"
+  }
+}

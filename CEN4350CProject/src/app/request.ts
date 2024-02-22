@@ -5,6 +5,7 @@ export interface Request {
   petWeight: number;
   petBreed: string;
   petAge: number;
+  address: string;
   date: string;
   startTime: number;
   endTime: number;
