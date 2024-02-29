@@ -9,5 +9,5 @@ export interface Request {
   date: string;
   startTime: number;
   endTime: number;
-  petSitter: string;
+  petSitter: number;
 }
