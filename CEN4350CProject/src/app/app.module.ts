@@ -11,6 +11,7 @@ import { ReviewpageComponent } from './reviewpage/reviewpage.component';
 import { PetsitterspageComponent } from './petsitterspage/petsitterspage.component';
 import { AccountpageComponent } from './accountpage/accountpage.component';
 import { PetsitterdetailsComponent } from './petsitterdetails/petsitterdetails.component';
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PetsitterdetailsComponent } from './petsitterdetails/petsitterdetails.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
