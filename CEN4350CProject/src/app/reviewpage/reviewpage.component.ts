@@ -20,4 +20,15 @@ export class ReviewpageComponent implements OnInit {
       this.reviews = data;
     });
   }
+
+  submitReview(author: string, authorEmail: string, comment: string) {
+    console.info('review submitted');
+    var time = new Date(Date.now());
+    this.apiService.postReview({
+        author: author,
+        authorEmail: authorEmail,
+        comment: comment,
+        date: String(time.getMonth() + "." + time.getDay() + "." + time.getFullYear())
+    });
+  }
 }

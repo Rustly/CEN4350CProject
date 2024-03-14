@@ -1,20 +1,26 @@
 <div class='accountpage'>
   <h1>Pending Sitting Requests</h1>
   <ul class='pendinglist'>
-    <li *ngFor='let request of requests_pending'>
-      {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
-    </li>
+      <ng-container *ngFor='let request of requests'>
+          <li *ngIf="request.requestState=='pending'">
+              {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
+          </li>
+      </ng-container>
   </ul>
   <h1>Confirmed Sitting Requests</h1>
   <ul class='confirmedlist'>
-    <li *ngFor='let request of requests_confirmed'>
-      {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
-    </li>
+      <ng-container *ngFor='let request of requests'>
+          <li *ngIf="request.requestState=='confirmed'">
+              {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{requests.petSitter}}
+          </li>
+      </ng-container>
   </ul>
   <h1>Denied Sitting Requests</h1>
   <ul class='deniedlist'>
-    <li *ngFor='let request of requests_denied'>
-      {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
-    </li>
+      <ng-container *ngFor='let request of requests'>
+          <li *ngIf="request.requestState=='denied'">
+              {{request.petName}} from {{request.startTime}} to {{request.endTime}} on {{request.date}} with {{request.petSitter}}
+          </li>
+      </ng-container>
   </ul>
 </div>
