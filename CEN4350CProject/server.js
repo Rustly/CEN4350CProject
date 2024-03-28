@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const sqlite = require('sqlite3');
 const parser = require('body-parser');
 const app = express();
@@ -14,6 +15,12 @@ app.use((req, res, next) => {
     "Origin, X-Requested-With, Content-Type, Accept"); 
   next();
 });
+
+app.use(session({
+  secret: 'something',
+  resave: false,
+  saveUninitialized: true
+}));
 
 app.get('/api/petsitters', (req, res) => {
   db.all('SELECT * FROM petsitters', (err, rows) => {
@@ -40,7 +47,6 @@ app.get('/api/reviews', (req, res) => {
 });
 
 app.post('/api/getrequests', (req, res) => {
-  console.info(req.body);
   db.all('SELECT * FROM requests WHERE requesterId = ' + req.body.accountId, (err, rows) => {
     if (err) {
       console.error(err);
@@ -65,8 +71,17 @@ app.post('/api/addreview', (req, res) => {
     });
 });
 
-app.post('/api/postrequest', (req, res) => {
+app.post('/api/addrequest', (req, res) => {
   const request = req.body;
+  db.run('INSERT INTO requests (requesterId, petName, petWeight, petBreed, petAge, address, date, startTime, endTime, petSitter) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
+    [request.requesterId, request.petName, request.petWeight, request.petBreed, request.petAge, request.address, request.date, request.startTime, request.endTime, request.petSitter], err => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Internal Server Error' });
+        return;
+      }
+  });
+  res.status(201).json({ message: 'Request added' });
 });
 
 app.listen(3000, () => {

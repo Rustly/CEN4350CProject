@@ -1,29 +1,29 @@
 <div class='requestform'>
   <h1>Pet Information</h1>
   <label>Name </label>
-  <input type='text' placeholder='Pet Name' required name='petname'><br><br>
+  <input type='text' placeholder='Pet Name' required name='petname' #petname><br><br>
   <label>Type </label>
-  <select name='pettype'>
+  <select name='pettype' required #pettype>
     <option value='cat'>Cat</option>
     <option value='dog'>Dog</option>
   </select><br><br>
   <label>Weight </label>
-  <input type='number' placeholder='Pet Weight' required name='petweight'><br><br>
+  <input type='number' placeholder='Pet Weight' required name='petweight' #weight><br><br>
   <label>Breed </label>
-  <input type='text' placeholder='Pet Breed' required name='petbreed'><br><br>
+  <input type='text' placeholder='Pet Breed' required name='petbreed' #petbreed><br><br>
   <label>Age </label>
-  <input type='number' placeholder='Pet Age' required name='petage'><br><br>
+  <input type='number' placeholder='Pet Age' required name='petage' #petage><br><br>
   <h1>Appointment Information</h1>
   <label>Date </label>
-  <input type='date' required name='date'><br><br>
+  <input type='date' required name='date' #date><br><br>
   <label>Start Time </label>
-  <input type='time' required name='starttime'><br><br>
+  <input type='time' required name='starttime' #starttime><br><br>
   <label>End Time </label>
-  <input type='time' required name='endtime'><br><br>
+  <input type='time' required name='endtime' #endtime><br><br>
   <label>Address </label>
-  <input type="text" required name="address" /><br /><br />
+  <input type="text" required name="address" #address/><br /><br />
   <h1>Pet Sitter</h1>
   <label>Sitter Name </label>
-  <input type='text' placeholder='Sitter Name' required name='sittername'><br><br>
-  <button>Finish Request</button>
+  <input type='text' placeholder='Sitter Name' required name='sittername' #sitter><br><br>
+  <button type="submit" (click)="addRequest(1, petname.value, parseInt(weight.value), petbreed.value, parseInt(petage.value), address.value, date.value, parseInt(starttime.value), parseInt(endtime.value), parseInt(sitter.value));">Finish Request</button>
 </div>

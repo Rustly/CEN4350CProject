@@ -1,4 +1,4 @@
-export interface Request {
+export interface SittingRequest {
   id: number;
   requesterId: number;
   petName: string;
